@@ -1,19 +1,16 @@
 module.exports = {
     content: [
-        './assets/**/*.{vue,js,css}',
-        './components/**/*.{vue,js}',
+        './components/**/*.{js,vue,ts}',
         './layouts/**/*.vue',
         './pages/**/*.vue',
-        './plugins/**/*.{js,ts}'
+        './plugins/**/*.{js,ts}',
+        './nuxt.config.{js,ts}',
     ],
-    variants: {
-        extend: {}
-    },
     plugins: [],
     theme: {
         fontFamily: {
             display: ['Red Hat Display'],
-            body: ['Red Hat Text']
-        }
-    }
-}
+            body: ['Red Hat Text'],
+        },
+    },
+};

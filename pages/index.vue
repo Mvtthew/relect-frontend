@@ -1,15 +1,13 @@
 <template>
-    <h1>
-        Witam
-    </h1>
+    <div>
+        <UiHeading size="4xl">
+            asd
+        </UiHeading>
+        <p>
+            asd
+        </p>
+        <nuxt-link to="/about">
+            go
+        </nuxt-link>
+    </div>
 </template>
-
-<script>
-export default {
-    head () {
-        return {
-            title: 'HOME | Relect'
-        }
-    }
-}
-</script>
