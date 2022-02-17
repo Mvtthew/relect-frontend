@@ -23,7 +23,20 @@
                         >
                     </nuxt-link>
                 </div>
-                <p class="mt-auto text-center mb-2 text-xs text-zinc-400">
+
+                <div class="grow overflow-scroll">
+                    <CompositionMenuItem
+                        v-for="(menuItem, index) in menuItems"
+                        :key="menuItem.id"
+                        :to="menuItem.to"
+                        :title="menuItem.title"
+                        :show-title="isSidebarOpen || isMobileSidebarShown"
+                        :icon="menuItem.icon"
+                        :show-border-bottom="index < menuItems.length - 1"
+                    />
+                </div>
+
+                <p class="text-center mb-2 text-xs text-zinc-400">
                     v{{ $config.version }}
                 </p>
                 <div
@@ -68,6 +81,10 @@ export default {
         return {
             isSidebarOpen: true,
             isMobileSidebarShown: false,
+            menuItems: [
+                { id: 1, to: '/', title: 'Dashboard', icon: 'bx-home' },
+                { id: 1, to: '/about', title: 'About', icon: 'bx-info-circle' },
+            ],
         };
     },
     head () {
@@ -81,6 +98,11 @@ export default {
         },
         sidebarWidthClass () {
             return this.isSidebarOpen ? 'lg:w-80 md:w-64' : 'lg:w-16';
+        },
+    },
+    watch: {
+        '$route.path' () {
+            this.isMobileSidebarShown = false;
         },
     },
     methods: {

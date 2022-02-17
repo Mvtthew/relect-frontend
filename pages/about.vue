@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link to="/">
-        back
-    </nuxt-link>
+    <div>
+        ABOUT PAGE
+    </div>
 </template>
