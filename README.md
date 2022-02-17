@@ -2,4 +2,4 @@
 
 # Relect frontend
 
-🟩 Relect app frontend written in Nuxt v3
+🟩 Relect app frontend written in Nuxt
