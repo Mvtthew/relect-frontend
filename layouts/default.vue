@@ -23,8 +23,11 @@
                         >
                     </nuxt-link>
                 </div>
+                <p class="mt-auto text-center mb-2 text-xs text-zinc-400">
+                    v{{ $config.version }}
+                </p>
                 <div
-                    class="hover:bg-slate-800 border-t-2 border-slate-800 w-100 cursor-pointer mt-auto p-4 text-center transition-colors hidden lg:block"
+                    class="hover:bg-slate-800 border-t-2 border-slate-800 w-100 cursor-pointer p-4 text-center transition-colors hidden lg:block"
                     :title="$t('toggleSidebar')"
                     @click="toggleSidebaOpen"
                 >

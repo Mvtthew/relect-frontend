@@ -1,4 +1,5 @@
 import pl from './locales/pl';
+import { version } from './package.json';
 
 export default {
     // Global page headers: https://go.nuxtjs.dev/config-head
@@ -79,5 +80,9 @@ export default {
 
     server: {
         host: '0.0.0.0',
+    },
+
+    publicRuntimeConfig: {
+        version,
     },
 };
